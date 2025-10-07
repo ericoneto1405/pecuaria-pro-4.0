@@ -50,49 +50,55 @@ function WidgetTempo() {
       {/* Título */}
       <div className="widget-tempo__titulo">Status do Tempo</div>
       
-      {/* Ícone Central com Animação */}
-      <div className="widget-tempo__icone-container">
-        <div className="widget-tempo__icone" key={getIcone()}>
-          {getIcone()}
+      {/* Layout em Grid: Ícone + Info */}
+      <div className="widget-tempo__grid">
+        {/* Coluna Esquerda: Ícone */}
+        <div className="widget-tempo__icone-container">
+          <div className="widget-tempo__icone" key={getIcone()}>
+            {getIcone()}
+          </div>
         </div>
-      </div>
-      
-      {/* Status Text */}
-      <div className="widget-tempo__status">
-        {getTextoStatus()}
-      </div>
-      
-      {/* Data e Hora Completa */}
-      <div className="widget-tempo__datetime">
-        {formatarDataCompleta()}
-      </div>
-      
-      {/* Controles Discretos */}
-      <div className="widget-tempo__controles">
-        <button
-          onClick={tempo.pausar}
-          className={`widget-btn ${tempo.estaPausado ? 'widget-btn--active' : ''}`}
-          title="Pausar"
-          type="button"
-        >
-          Pausar
-        </button>
-        <button
-          onClick={tempo.normal}
-          className={`widget-btn ${tempo.estaNormal ? 'widget-btn--active' : ''}`}
-          title="Normal"
-          type="button"
-        >
-          Normal
-        </button>
-        <button
-          onClick={tempo.rapido}
-          className={`widget-btn ${tempo.estaRapido ? 'widget-btn--active' : ''}`}
-          title="Rápido"
-          type="button"
-        >
-          Rápido
-        </button>
+        
+        {/* Coluna Direita: Info + Controles */}
+        <div className="widget-tempo__info">
+          {/* Status Text */}
+          <div className="widget-tempo__status">
+            {getTextoStatus()}
+          </div>
+          
+          {/* Data e Hora Completa */}
+          <div className="widget-tempo__datetime">
+            {formatarDataCompleta()}
+          </div>
+          
+          {/* Controles Discretos */}
+          <div className="widget-tempo__controles">
+            <button
+              onClick={tempo.pausar}
+              className={`widget-btn ${tempo.estaPausado ? 'widget-btn--active' : ''}`}
+              title="Pausar"
+              type="button"
+            >
+              Pausar
+            </button>
+            <button
+              onClick={tempo.normal}
+              className={`widget-btn ${tempo.estaNormal ? 'widget-btn--active' : ''}`}
+              title="Normal"
+              type="button"
+            >
+              Normal
+            </button>
+            <button
+              onClick={tempo.rapido}
+              className={`widget-btn ${tempo.estaRapido ? 'widget-btn--active' : ''}`}
+              title="Rápido"
+              type="button"
+            >
+              Rápido
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
