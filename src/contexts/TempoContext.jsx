@@ -23,13 +23,13 @@ export function TempoProvider({ children }) {
   const [velocidade, setVelocidade] = useState(VELOCIDADES.PAUSE);
   const intervalRef = useRef(null);
   
-  // Calcular quantos minutos do jogo passam por segundo real
-  const getMinutosPorSegundo = (vel) => {
+  // Calcular quantos segundos do jogo passam por segundo real
+  const getSegundosPorSegundo = (vel) => {
     if (vel === VELOCIDADES.PAUSE) return 0;
-    // NORMAL: 30 min jogo em 60 min reais = 30/3600 min por segundo = 0.00833 min/s
-    if (vel === VELOCIDADES.NORMAL) return 30 / 3600;
-    // RÁPIDO: 15 min jogo em 60 min reais = 15/3600 min por segundo = 0.00416 min/s
-    if (vel === VELOCIDADES.RAPIDO) return 15 / 3600;
+    // NORMAL: 30 min jogo = 1800 seg em 3600 seg reais = 0.5
+    if (vel === VELOCIDADES.NORMAL) return 0.5;
+    // RÁPIDO: 15 min jogo = 900 seg em 3600 seg reais = 0.25
+    if (vel === VELOCIDADES.RAPIDO) return 0.25;
     return 0;
   };
   
@@ -41,15 +41,19 @@ export function TempoProvider({ children }) {
     
     // Se pausado, não faz nada
     if (velocidade === VELOCIDADES.PAUSE) {
+      console.log('⏸️ Tempo PAUSADO');
       return;
     }
+    
+    console.log(`⏰ Iniciando tempo - Velocidade: ${velocidade === VELOCIDADES.NORMAL ? 'NORMAL' : 'RÁPIDO'}`);
     
     // Atualizar a cada segundo
     intervalRef.current = setInterval(() => {
       setDataAtual(dataAnterior => {
         const novaData = new Date(dataAnterior);
-        const minutosParaAdicionar = getMinutosPorSegundo(velocidade);
-        novaData.setMinutes(novaData.getMinutes() + minutosParaAdicionar);
+        const segundosParaAdicionar = getSegundosPorSegundo(velocidade);
+        novaData.setSeconds(novaData.getSeconds() + segundosParaAdicionar);
+        console.log(`🕐 ${novaData.toLocaleTimeString('pt-BR')} [+${segundosParaAdicionar}s]`);
         return novaData;
       });
     }, 1000); // Tick a cada 1 segundo real
@@ -61,9 +65,20 @@ export function TempoProvider({ children }) {
     };
   }, [velocidade]);
   
-  const pausar = () => setVelocidade(VELOCIDADES.PAUSE);
-  const normal = () => setVelocidade(VELOCIDADES.NORMAL);
-  const rapido = () => setVelocidade(VELOCIDADES.RAPIDO);
+  const pausar = () => {
+    console.log('👆 Clique em PAUSAR');
+    setVelocidade(VELOCIDADES.PAUSE);
+  };
+  
+  const normal = () => {
+    console.log('👆 Clique em NORMAL');
+    setVelocidade(VELOCIDADES.NORMAL);
+  };
+  
+  const rapido = () => {
+    console.log('👆 Clique em RÁPIDO');
+    setVelocidade(VELOCIDADES.RAPIDO);
+  };
   
   const formatarData = () => {
     return dataAtual.toLocaleDateString('pt-BR', {
@@ -76,7 +91,8 @@ export function TempoProvider({ children }) {
   const formatarHora = () => {
     return dataAtual.toLocaleTimeString('pt-BR', {
       hour: '2-digit',
-      minute: '2-digit'
+      minute: '2-digit',
+      second: '2-digit'
     });
   };
   
