@@ -37,164 +37,214 @@ body {
 }
 
 /* ================================================
-   HEADER DE TEMPO (NOVO SISTEMA)
+   HEADER MACOS SONOMA STYLE
    ================================================ */
 
-.header-tempo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 2rem;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
-  border-bottom: 2px solid #0f766e;
-}
-
-/* Tempo Display */
-.tempo-display {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.tempo-data {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.data-numero {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #ffffff;
-  font-family: 'Courier New', monospace;
-}
-
-.data-dia {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #94a3b8;
-  font-weight: 500;
-}
-
-.tempo-hora {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #14b8a6;
-  font-family: 'Courier New', monospace;
-  padding: 0.35rem 0.9rem;
-  background: rgba(20, 184, 166, 0.15);
-  border-radius: 0.5rem;
-  border: 1px solid rgba(20, 184, 166, 0.3);
-}
-
-/* Controles de Velocidade */
-.tempo-controles {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.btn-tempo {
-  width: 48px;
-  height: 48px;
-  border: 2px solid rgba(148, 163, 184, 0.3);
-  background: rgba(30, 41, 59, 0.5);
-  color: #cbd5e1;
-  font-size: 1.2rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
+.header-macos {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: system-ui;
+  padding: 0.75rem 2rem;
+  background: rgba(28, 28, 30, 0.95);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.btn-tempo:hover {
-  background: rgba(51, 65, 85, 0.8);
-  border-color: #0f766e;
-  color: #14b8a6;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
+/* ================================================
+   WIDGET DE TEMPO - MACOS SONOMA
+   ================================================ */
+
+.widget-tempo {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(40px) saturate(200%);
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-tempo--active {
-  background: #0f766e;
-  border-color: #14b8a6;
-  color: #ffffff;
-  box-shadow: 0 0 20px rgba(15, 118, 110, 0.5);
+.widget-tempo:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
-.btn-tempo--active:hover {
-  background: #0d6660;
+/* Variações de estado */
+.widget-tempo--pausado {
+  border-color: rgba(255, 69, 58, 0.3);
 }
 
-/* Status Badge */
-.tempo-status {
-  min-width: 100px;
-  text-align: right;
+.widget-tempo--normal {
+  border-color: rgba(52, 199, 89, 0.3);
 }
 
-.status-badge {
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  display: inline-block;
+.widget-tempo--rapido {
+  border-color: rgba(255, 214, 10, 0.3);
+  animation: widget-pulse 2s ease-in-out infinite;
 }
 
-.status-pause {
-  background: rgba(239, 68, 68, 0.2);
-  color: #fca5a5;
-  border: 1px solid rgba(239, 68, 68, 0.4);
-}
-
-.status-normal {
-  background: rgba(34, 197, 94, 0.2);
-  color: #86efac;
-  border: 1px solid rgba(34, 197, 94, 0.4);
-}
-
-.status-rapido {
-  background: rgba(234, 179, 8, 0.2);
-  color: #fde047;
-  border: 1px solid rgba(234, 179, 8, 0.4);
-  animation: pulse-rapido 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse-rapido {
+@keyframes widget-pulse {
   0%, 100% {
-    opacity: 1;
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 0 0 0 rgba(255, 214, 10, 0.7);
   }
   50% {
-    opacity: 0.7;
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 0 0 8px rgba(255, 214, 10, 0);
   }
+}
+
+/* Título */
+.widget-tempo__titulo {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: -0.25rem;
+}
+
+/* Ícone Central */
+.widget-tempo__icone-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.widget-tempo__icone {
+  font-size: 3.5rem;
+  line-height: 1;
+  animation: icone-entrada 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes icone-entrada {
+  0% {
+    transform: scale(0.8) rotate(-10deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.widget-tempo--rapido .widget-tempo__icone {
+  animation: icone-entrada 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+             icone-rapido 1s ease-in-out infinite;
+}
+
+@keyframes icone-rapido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Status Text */
+.widget-tempo__status {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-top: -0.25rem;
+}
+
+/* Data e Hora Completa */
+.widget-tempo__datetime {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+  letter-spacing: -0.01em;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  margin-top: 0.25rem;
+}
+
+/* Controles Discretos */
+.widget-tempo__controles {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.widget-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: -0.01em;
+}
+
+.widget-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
+
+.widget-btn:active {
+  transform: translateY(0);
+}
+
+.widget-btn--active {
+  background: rgba(10, 132, 255, 0.8);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(10, 132, 255, 0.4);
+}
+
+.widget-btn--active:hover {
+  background: rgba(10, 132, 255, 0.9);
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .header-tempo {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
+  .widget-tempo {
+    padding: 1.25rem 1.75rem;
   }
   
-  .tempo-display {
-    width: 100%;
+  .widget-tempo__icone {
+    font-size: 3rem;
+  }
+  
+  .widget-tempo__datetime {
+    font-size: 0.75rem;
+  }
+  
+  .widget-tempo__controles {
+    flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .tempo-controles {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .tempo-status {
-    width: 100%;
-    text-align: center;
   }
 }
 
