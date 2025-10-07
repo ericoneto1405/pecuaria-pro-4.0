@@ -4,8 +4,8 @@
  * 
  * VELOCIDADES:
  * - PAUSE: 0 (pausado)
- * - NORMAL: 1 dia real = 30 min jogo
- * - RAPIDO: 1 dia real = 15 min jogo
+ * - NORMAL: 30 min de jogo a cada 1 hora real (0.5x)
+ * - RAPIDO: 15 min de jogo a cada 1 hora real (0.25x)
  */
 
 import { createContext, useContext, useState, useEffect, useRef } from 'react';
@@ -14,8 +14,8 @@ const TempoContext = createContext();
 
 const VELOCIDADES = {
   PAUSE: 0,
-  NORMAL: 2,    // 1 dia (1440 min) em 30 min reais = 48x
-  RAPIDO: 4     // 1 dia (1440 min) em 15 min reais = 96x
+  NORMAL: 1,    // 30 min jogo a cada 60 min reais
+  RAPIDO: 2     // 15 min jogo a cada 60 min reais
 };
 
 export function TempoProvider({ children }) {
@@ -26,8 +26,10 @@ export function TempoProvider({ children }) {
   // Calcular quantos minutos do jogo passam por segundo real
   const getMinutosPorSegundo = (vel) => {
     if (vel === VELOCIDADES.PAUSE) return 0;
-    if (vel === VELOCIDADES.NORMAL) return 1440 / (30 * 60); // 0.8 min jogo/seg
-    if (vel === VELOCIDADES.RAPIDO) return 1440 / (15 * 60); // 1.6 min jogo/seg
+    // NORMAL: 30 min jogo em 60 min reais = 30/3600 min por segundo = 0.00833 min/s
+    if (vel === VELOCIDADES.NORMAL) return 30 / 3600;
+    // RÁPIDO: 15 min jogo em 60 min reais = 15/3600 min por segundo = 0.00416 min/s
+    if (vel === VELOCIDADES.RAPIDO) return 15 / 3600;
     return 0;
   };
   

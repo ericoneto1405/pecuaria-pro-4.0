@@ -101,45 +101,45 @@ http://localhost:5173
 
 ## 📊 CÁLCULOS ESPERADOS
 
-### Modo Normal (48x)
+### Modo Normal (0.5x)
 | Tempo Real | Tempo Jogo |
 |-----------|------------|
-| 1 segundo | 48 segundos (0.8 min) |
-| 1 minuto  | 48 minutos |
-| 30 minutos | 24 horas (1 dia) |
-| 1 hora    | 2 dias |
-| 1 dia     | 48 dias |
+| 1 segundo | 0.5 segundos |
+| 1 minuto  | 30 segundos |
+| 1 hora    | 30 minutos |
+| 2 horas   | 1 hora (jogo) |
+| 1 dia     | 12 horas (jogo) |
 
-### Modo Rápido (96x)
+### Modo Rápido (0.25x)
 | Tempo Real | Tempo Jogo |
 |-----------|------------|
-| 1 segundo | 96 segundos (1.6 min) |
-| 1 minuto  | 96 minutos (1h36) |
-| 15 minutos | 24 horas (1 dia) |
-| 30 minutos | 2 dias |
-| 1 dia     | 96 dias |
+| 1 segundo | 0.25 segundos |
+| 1 minuto  | 15 segundos |
+| 1 hora    | 15 minutos |
+| 4 horas   | 1 hora (jogo) |
+| 1 dia     | 6 horas (jogo) |
 
 ---
 
 ## 🎯 TESTES PRÁTICOS
 
-### Teste 1: Um Dia Completo
+### Teste 1: Uma Hora de Jogo
 1. Inicie em **Normal**
 2. Anote a hora inicial
-3. Aguarde **30 minutos reais**
-4. Deve ter passado **1 dia de jogo** (24 horas)
+3. Aguarde **2 horas reais**
+4. Deve ter passado **1 hora de jogo** (60 minutos)
 
-### Teste 2: Uma Semana
-1. Inicie em **Rápido**
-2. Aguarde **105 minutos reais** (~1h45)
-3. Deve ter passado **1 semana** (7 dias)
+### Teste 2: Um Dia de Jogo
+1. Inicie em **Normal**
+2. Aguarde **48 horas reais** (2 dias)
+3. Deve ter passado **1 dia de jogo** (24 horas)
 
-### Teste 3: Gestação Bovina
+### Teste 3: Gestação Bovina (280 dias)
 1. Marque data inicial
-2. Rode em **Rápido**
+2. Rode em **Rápido** (mais rápido disponível)
 3. Para simular 280 dias de gestação:
-   - Tempo real necessário: ~2 dias e 22 horas
-   - Ou deixe rodando durante o desenvolvimento!
+   - Tempo real necessário: ~1867 horas (~78 dias reais)
+   - **Nota**: Para simulações longas, considere aumentar a velocidade!
 
 ---
 

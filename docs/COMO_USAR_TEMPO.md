@@ -14,15 +14,15 @@ O sistema de tempo do jogo já está **100% FUNCIONAL** e **CONECTADO**!
 - Clique em: `[Pausar]`
 
 ### ▶️ NORMAL
-- 1 dia real = **30 minutos** de jogo
-- 1 segundo real = **0.8 minutos** de jogo
-- **48x mais rápido** que tempo real
+- 1 hora real = **30 minutos** de jogo
+- 1 segundo real = **0.5 segundos** de jogo
+- **0.5x tempo real** (mais lento)
 - Clique em: `[Normal]`
 
 ### ⏩ RÁPIDO
-- 1 dia real = **15 minutos** de jogo
-- 1 segundo real = **1.6 minutos** de jogo
-- **96x mais rápido** que tempo real
+- 1 hora real = **15 minutos** de jogo
+- 1 segundo real = **0.25 segundos** de jogo
+- **0.25x tempo real** (ainda mais lento)
 - Clique em: `[Rápido]`
 
 ---
