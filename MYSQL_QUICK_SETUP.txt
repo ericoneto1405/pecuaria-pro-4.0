@@ -1,0 +1,37 @@
+═══════════════════════════════════════════════════════════
+  SETUP RÁPIDO DO MYSQL - PECUÁRIA PRO 4.0
+═══════════════════════════════════════════════════════════
+
+VOCÊ TEM MYSQL COM SENHA CONFIGURADA.
+
+OPÇÃO MAIS FÁCIL - Execute estes comandos:
+
+1. Conecte ao MySQL (digite sua senha quando pedir):
+   mysql -u root -p
+
+2. Dentro do MySQL, cole isto:
+   CREATE DATABASE pecuaria_pro CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+   EXIT;
+
+3. Execute o schema:
+   cd backend
+   mysql -u root -p pecuaria_pro < database/schema.sql
+
+4. Edite o arquivo .env e coloque sua senha:
+   DB_PASSWORD=sua_senha_aqui
+
+5. Teste:
+   node -e "const {testarConexao} = require('./config/database'); testarConexao();"
+
+PRONTO! ✅
+
+═══════════════════════════════════════════════════════════
+
+NÃO SABE A SENHA?
+
+Tente resetar para: pecuaria123
+
+Veja instruções completas em:
+backend/database/CONFIGURAR_MYSQL.md
+
+═══════════════════════════════════════════════════════════

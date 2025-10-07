@@ -1,0 +1,1221 @@
+/**
+ * ESTILOS DOS COMPONENTES DE ANIMAIS
+ */
+
+/* ================================================
+   LISTA DE ANIMAIS
+   ================================================ */
+
+.animais-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.animais-view__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(15, 23, 42, 0.1);
+}
+
+.animais-view__title {
+  margin: 0;
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.animais-view__stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.stat__valor {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f766e;
+}
+
+.stat__label {
+  font-size: 0.85rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ================================================
+   FILTROS
+   ================================================ */
+
+.filtros-animais {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.filtros-animais__controles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.filtro-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filtro-grupo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filtro-select,
+.filtro-input {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.filtro-select:focus,
+.filtro-input:focus {
+  outline: none;
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+.filtro-grupo--busca {
+  grid-column: span 2;
+}
+
+/* ================================================
+   GRID DE ANIMAIS
+   ================================================ */
+
+.animais-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 1400px) {
+  .animais-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .animais-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .animais-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================================
+   CARD DE ANIMAL
+   ================================================ */
+
+.animal-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.animal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  border-color: #0f766e;
+}
+
+.animal-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.animal-card__id-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.animal-card__brinco {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+}
+
+.animal-card__sexo {
+  font-size: 1.2rem;
+}
+
+.animal-card__nome {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.animal-card__raca-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.animal-card__registro {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.animal-card__metricas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.metrica {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metrica dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(30, 41, 59, 0.65);
+  font-weight: 500;
+}
+
+.metrica dd {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1f2937;
+}
+
+.animal-card__visual {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.tag--pelagem {
+  background: rgba(14, 116, 144, 0.12);
+  color: #0e7490;
+}
+
+.tag--chifres {
+  background: rgba(120, 53, 15, 0.12);
+  color: #78350f;
+}
+
+.animal-card__heterose {
+  margin-top: 0.25rem;
+}
+
+.animal-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.animal-card__valor strong {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* ================================================
+   BADGES
+   ================================================ */
+
+.badge {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.badge--puro {
+  background: rgba(5, 150, 105, 0.12);
+  color: #047857;
+}
+
+.badge--f1 {
+  background: rgba(217, 119, 6, 0.12);
+  color: #c2410c;
+}
+
+.badge--composta {
+  background: rgba(139, 92, 246, 0.12);
+  color: #7c3aed;
+}
+
+.badge--mestico {
+  background: rgba(71, 85, 105, 0.12);
+  color: #475569;
+}
+
+.badge--heterose {
+  background: rgba(234, 179, 8, 0.15);
+  color: #a16207;
+}
+
+/* ================================================
+   DETALHES DO ANIMAL
+   ================================================ */
+
+.animal-detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.btn--back {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #475569;
+  transition: all 0.2s;
+}
+
+.btn--back:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.animal-detalhes__header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.animal-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
+}
+
+.animal-detalhes__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.animal-detalhes__nome {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #0f172a;
+}
+
+.identificacao-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag--id,
+.tag--brinco,
+.tag--sexo {
+  background: rgba(15, 23, 42, 0.06);
+  color: #475569;
+}
+
+.registro-display {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.registro-display strong {
+  font-size: 1rem;
+  color: #0f766e;
+}
+
+.registro-display small {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* ================================================
+   TABS
+   ================================================ */
+
+.animal-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 2px solid rgba(15, 23, 42, 0.1);
+  padding-bottom: 0;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.05);
+}
+
+.tab--active {
+  color: #0f766e;
+  border-bottom-color: #0f766e;
+  background: rgba(15, 118, 110, 0.08);
+}
+
+/* ================================================
+   CONTEÚDO DAS ABAS
+   ================================================ */
+
+.animal-content {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.aba-geral {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-section__title {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #0f172a;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.info-item dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(30, 41, 59, 0.65);
+  font-weight: 500;
+}
+
+.info-item dd {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+/* ================================================
+   COMPOSIÇÃO RACIAL
+   ================================================ */
+
+.composicao-section {
+  background: rgba(15, 118, 110, 0.03);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(15, 118, 110, 0.15);
+}
+
+.composicao-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.composicao-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.composicao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.composicao-raca {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.composicao-percentual {
+  font-weight: 700;
+  color: #0f766e;
+}
+
+.composicao-barra {
+  height: 8px;
+  background: rgba(15, 23, 42, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.composicao-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0f766e, #14b8a6);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* ================================================
+   HETEROSE
+   ================================================ */
+
+.heterose-section {
+  background: rgba(234, 179, 8, 0.05);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(234, 179, 8, 0.2);
+}
+
+.heterose-display {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heterose-valor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.heterose-numero {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #a16207;
+}
+
+.heterose-tipo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #78350f;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.heterose-bonus h3 {
+  font-size: 1rem;
+  color: #78350f;
+  margin: 0 0 0.75rem 0;
+}
+
+.bonus-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bonus-lista li {
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  color: #1f2937;
+}
+
+.bonus-lista strong {
+  color: #a16207;
+}
+
+/* ================================================
+   VALOR DE MERCADO
+   ================================================ */
+
+.valor-section {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.08), rgba(20, 184, 166, 0.05));
+  border-radius: 0.75rem;
+  border: 1px solid rgba(15, 118, 110, 0.2);
+}
+
+.valor-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.valor-principal {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f766e;
+}
+
+.valor-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* ================================================
+   AVALIAÇÃO FENOTÍPICA
+   ================================================ */
+
+.avaliacao-fenotipica {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.section-subtitle {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.avaliacao-item {
+  padding: 1.25rem;
+  background: #f9fafb;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 0.75rem;
+}
+
+.avaliacao-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.avaliacao-item__header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.nota-tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.1);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+}
+
+.progress-bar {
+  height: 12px;
+  background: rgba(15, 23, 42, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0f766e, #14b8a6);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.progress-bar--conformacao .progress-fill {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.progress-bar--aprumos .progress-fill {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+
+.progress-bar--reproducao .progress-fill {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.progress-bar--temperamento .progress-fill {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.avaliacao-item__estrelas {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.observacoes-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.observacoes-lista li {
+  font-size: 0.9rem;
+  color: #64748b;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.observacoes-lista li::before {
+  content: '•';
+  position: absolute;
+  left: 0.5rem;
+  color: #0f766e;
+}
+
+.caracteristicas-visuais {
+  padding: 1.25rem;
+  background: #f9fafb;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 0.75rem;
+}
+
+.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.visual-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.visual-item dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.visual-item dd {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.avaliacao-resumo {
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.1), rgba(20, 184, 166, 0.05));
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.avaliacao-resumo h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: #0f172a;
+}
+
+.nota-final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nota-final__valor {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0f766e;
+}
+
+.nota-final__estrelas {
+  font-size: 1.8rem;
+}
+
+.nota-final__categoria {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.15);
+  color: #0f766e;
+}
+
+/* ================================================
+   AVALIAÇÃO GENÉTICA
+   ================================================ */
+
+.avaliacao-genetica--indisponivel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-box {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid;
+}
+
+.info-box--warning {
+  background: rgba(234, 179, 8, 0.05);
+  border-color: rgba(234, 179, 8, 0.3);
+  color: #78350f;
+}
+
+.info-box--info {
+  background: rgba(59, 130, 246, 0.05);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: #1e40af;
+}
+
+.info-box--educativo {
+  background: rgba(139, 92, 246, 0.05);
+  border-color: rgba(139, 92, 246, 0.2);
+  color: #6b21a8;
+}
+
+.info-box h3,
+.info-box h4 {
+  margin: 0 0 0.75rem 0;
+}
+
+.info-box p {
+  margin: 0.5rem 0;
+}
+
+.info-box ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.info-box li {
+  margin: 0.5rem 0;
+}
+
+.acoes-genetica {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.deps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(15, 23, 42, 0.1);
+}
+
+.deps-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.deps-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.deps-acuracia {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f766e;
+}
+
+.deps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.dep-card {
+  background: #f9fafb;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.2s;
+}
+
+.dep-card:hover {
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
+}
+
+.dep-card h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.dep-valor {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.dep-percentil {
+  font-size: 0.85rem;
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.dep-categoria {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.dep-categoria--elite {
+  background: rgba(234, 179, 8, 0.15);
+  color: #a16207;
+}
+
+.dep-categoria--superior {
+  background: rgba(14, 165, 233, 0.15);
+  color: #0369a1;
+}
+
+.dep-categoria--bom {
+  background: rgba(34, 197, 94, 0.15);
+  color: #15803d;
+}
+
+.dep-categoria--regular {
+  background: rgba(100, 116, 139, 0.15);
+  color: #475569;
+}
+
+.deps-resumo {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.deps-resumo h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: #0f172a;
+}
+
+.classificacao {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.classificacao--elite {
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(251, 191, 36, 0.1));
+  color: #a16207;
+  border: 2px solid rgba(234, 179, 8, 0.4);
+}
+
+.classificacao--superior {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(56, 189, 248, 0.1));
+  color: #0369a1;
+  border: 2px solid rgba(14, 165, 233, 0.4);
+}
+
+.classificacao--bom {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(74, 222, 128, 0.1));
+  color: #15803d;
+  border: 2px solid rgba(34, 197, 94, 0.4);
+}
+
+/* ================================================
+   GENEALOGIA
+   ================================================ */
+
+.genealogia {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.genealogia--vazia {
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.arvore-genealogica {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background: #f9fafb;
+  border-radius: 1rem;
+}
+
+.arvore-nivel {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.animal-node {
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  min-width: 200px;
+  transition: all 0.2s;
+}
+
+.animal-node:hover {
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  transform: translateY(-2px);
+}
+
+.animal-node--self {
+  border-color: #0f766e;
+  border-width: 3px;
+  background: rgba(15, 118, 110, 0.05);
+}
+
+.animal-node--pai {
+  border-color: #3b82f6;
+}
+
+.animal-node--mae {
+  border-color: #ec4899;
+}
+
+.animal-node--desconhecido {
+  border-style: dashed;
+  opacity: 0.6;
+}
+
+.node-avatar {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.node-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.node-nome {
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.node-id,
+.node-raca {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.arvore-conectores {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 30px;
+}
+
+.conector {
+  background: #cbd5e1;
+}
+
+.conector--vertical {
+  width: 2px;
+  height: 100%;
+}
+
+.conector--horizontal {
+  width: 200px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+}
+
+.genealogia-info {
+  padding: 1.25rem;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0 0 0;
+}
+
+.info-list div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.info-list dt {
+  font-weight: 600;
+  color: #475569;
+}
+
+.info-list dd {
+  margin: 0;
+  color: #0f172a;
+}
+
+/* ================================================
+   BOTÕES
+   ================================================ */
+
+.btn {
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn--primary {
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background: #0d6660;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
+}
+
+.btn--sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* ================================================
+   EMPTY STATES
+   ================================================ */
+
+.animais-view__empty,
+.animais-view__loading {
+  min-height: 300px;
+  border: 2px dashed rgba(15, 23, 42, 0.12);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(241, 245, 249, 0.65);
+}
+
+.animais-view__empty-text {
+  margin: 0;
+  color: #475569;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.05rem;
+}
+

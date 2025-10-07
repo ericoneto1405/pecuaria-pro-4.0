@@ -1,0 +1,343 @@
+{
+  "associacoes": {
+    "ABCZ": {
+      "nome_completo": "Associação Brasileira dos Criadores de Zebu",
+      "sigla": "ABCZ",
+      "website": "https://www.abcz.org.br",
+      "fundacao": 1934,
+      "sede": "Uberaba - MG",
+      "racas": ["Nelore", "Brahman", "Tabapuã", "Guzerá", "Sindi", "Gir", "Indubrasil"],
+      
+      "formato_registro": "ABCZ-[RACA]-[TIPO]-[ANO]-[SEQ]",
+      
+      "tipos_registro": {
+        "RN": "Registro de Nascimento",
+        "RD": "Registro Definitivo",
+        "LA": "Livro Aberto"
+      },
+      
+      "siglas_racas": {
+        "Nelore": "NEL",
+        "Brahman": "BRA",
+        "Tabapuã": "TAB",
+        "Guzerá": "GUZ",
+        "Sindi": "SIN",
+        "Gir": "GIR"
+      },
+      
+      "identificacao_fisica": {
+        "tatuagem_obrigatoria": true,
+        "tatuagem_local": "orelhas",
+        "tatuagem_orelha_direita": "ABCZ",
+        "tatuagem_orelha_esquerda": "sequencial",
+        "brinco_cor_padrao": "amarelo",
+        "microchip_opcional": true
+      },
+      
+      "exigencias_especiais": {
+        "FIV": "Animal produzido por Fertilização In Vitro - nome deve conter 'FIV'",
+        "TE": "Animal produzido por Transferência de Embriões - nome deve conter 'TE'",
+        "TEI": "Animal de TE importado - nome deve conter 'TEI'",
+        "afixo_obrigatorio": true
+      },
+      
+      "programas_melhoramento": [
+        "PMGZ - Programa de Melhoramento Genético de Zebuínos",
+        "Sumário de Touros",
+        "Avaliação Genômica"
+      ]
+    },
+    
+    "ABA": {
+      "nome_completo": "Associação Brasileira de Angus",
+      "sigla": "ABA",
+      "website": "https://www.angus.org.br",
+      "fundacao": 1963,
+      "sede": "Bagé - RS",
+      "racas": ["Angus"],
+      
+      "formato_registro": "ANG-[TIPO]-[ANO]-[SEQ]",
+      
+      "tipos_registro": {
+        "RGN": "Registro Genealógico de Nascimento",
+        "RGD": "Registro Genealógico Definitivo"
+      },
+      
+      "identificacao_fisica": {
+        "tatuagem_obrigatoria": true,
+        "tatuagem_local": "orelha_esquerda",
+        "formato_tatuagem": "ANG + sequencial",
+        "brinco_cor_padrao": "preto",
+        "brinco_obrigatorio": true
+      },
+      
+      "variedades": ["preto", "vermelho"],
+      "mocho_padrao": true,
+      
+      "programas_melhoramento": [
+        "PROMEBO - Programa de Melhoramento de Bovinos de Carne",
+        "Angus Verificado",
+        "Carne Angus Certificada"
+      ]
+    },
+    
+    "ABHB": {
+      "nome_completo": "Associação Brasileira de Hereford e Braford",
+      "sigla": "ABHB",
+      "website": "https://www.abhb.com.br",
+      "fundacao": 1962,
+      "sede": "Bagé - RS",
+      "racas": ["Hereford", "Braford"],
+      
+      "formato_registro": "ABHB-[RACA]-[TIPO]-[ANO]-[SEQ]",
+      
+      "tipos_registro": {
+        "RGN": "Registro Genealógico de Nascimento",
+        "RGD": "Registro Genealógico Definitivo"
+      },
+      
+      "siglas_racas": {
+        "Hereford": "HER",
+        "Braford": "BRA"
+      },
+      
+      "identificacao_fisica": {
+        "tatuagem_obrigatoria": true,
+        "tatuagem_orelha_direita": "sigla_raca",
+        "tatuagem_orelha_esquerda": "sequencial",
+        "brinco_obrigatorio": true,
+        "brinco_cor_padrao": "branco"
+      },
+      
+      "programas_melhoramento": [
+        "Avaliação Genética",
+        "Conexão Hereford-Braford"
+      ]
+    },
+    
+    "ABCCH": {
+      "nome_completo": "Associação Brasileira de Criadores de Charolês",
+      "sigla": "ABCCH",
+      "website": "https://www.charolescolombia.com/brasil",
+      "fundacao": 1975,
+      "sede": "Porto Alegre - RS",
+      "racas": ["Charolês"],
+      
+      "formato_registro": "CHA-RG-[ANO]-[SEQ]",
+      
+      "tipos_registro": {
+        "RG": "Registro Genealógico"
+      },
+      
+      "identificacao_fisica": {
+        "tatuagem_obrigatoria": true,
+        "tatuagem_orelha_esquerda": "CHA + sequencial",
+        "brinco_numero": "sequencial",
+        "brinco_cor_padrao": "branco"
+      },
+      
+      "programas_melhoramento": [
+        "Programa de Melhoramento Genético"
+      ]
+    },
+    
+    "ABCSEN": {
+      "nome_completo": "Associação Brasileira de Criadores de Senepol",
+      "sigla": "ABCSEN",
+      "website": "https://www.senepol.com.br",
+      "fundacao": 1995,
+      "sede": "Campo Grande - MS",
+      "racas": ["Senepol"],
+      
+      "formato_registro": "SEN-RG-[ANO]-[SEQ]",
+      
+      "tipos_registro": {
+        "RG": "Registro Genealógico"
+      },
+      
+      "identificacao_fisica": {
+        "tatuagem_obrigatoria": true,
+        "brinco_obrigatorio": true,
+        "brinco_cor_padrao": "vermelho"
+      },
+      
+      "programas_melhoramento": [
+        "Programa de Melhoramento Senepol Brasil"
+      ]
+    },
+    
+    "ABCB": {
+      "nome_completo": "Associação Brasileira de Criadores de Bonsmara",
+      "sigla": "ABCB",
+      "website": "https://www.bonsmara.org.br",
+      "fundacao": 2001,
+      "sede": "São Paulo - SP",
+      "racas": ["Bonsmara"],
+      
+      "formato_registro": "BON-RG-[ANO]-[SEQ]",
+      
+      "tipos_registro": {
+        "RG": "Registro Genealógico"
+      },
+      
+      "identificacao_fisica": {
+        "tatuagem_obrigatoria": true,
+        "brinco_obrigatorio": true,
+        "brinco_cor_padrao": "amarelo"
+      }
+    },
+    
+    "ABCBRH": {
+      "nome_completo": "Associação Brasileira de Criadores de Bovinos da Raça Holandesa",
+      "sigla": "ABCBRH",
+      "website": "https://www.gadoholandes.com.br",
+      "fundacao": 1934,
+      "sede": "Juiz de Fora - MG",
+      "racas": ["Holandesa"],
+      
+      "formato_registro": "HOL-[TIPO]-[ANO]-[SEQ]",
+      
+      "tipos_registro": {
+        "RGD": "Registro Genealógico Definitivo",
+        "PC": "Puro por Cruza"
+      },
+      
+      "variedades": ["preto_branco", "vermelho_branco"],
+      
+      "identificacao_fisica": {
+        "tatuagem_obrigatoria": true,
+        "tatuagem_orelha_direita": "HOL",
+        "tatuagem_orelha_esquerda": "sequencial",
+        "brinco_numero": "sequencial",
+        "brinco_cor_padrao": "amarelo"
+      },
+      
+      "programas_melhoramento": [
+        "Programa de Melhoramento Genético",
+        "Controle Leiteiro Oficial",
+        "Avaliação Genômica"
+      ]
+    },
+    
+    "ABCG": {
+      "nome_completo": "Associação Brasileira dos Criadores de Girolando",
+      "sigla": "ABCG",
+      "website": "https://www.girolando.com.br",
+      "fundacao": 1989,
+      "sede": "Uberaba - MG",
+      "racas": ["Girolando"],
+      
+      "formato_registro": "GIR-[GRAU]-[ANO]-[SEQ]",
+      
+      "graus_sangue": ["5/8", "3/4", "7/8"],
+      
+      "tipos_registro": {
+        "RG": "Registro Genealógico"
+      },
+      
+      "identificacao_fisica": {
+        "tatuagem_obrigatoria": true,
+        "tatuagem_orelha_esquerda": "GIR + sequencial",
+        "brinco_numero": "sequencial",
+        "brinco_cor_padrao": "verde"
+      },
+      
+      "composicao_racial": {
+        "base": "Gir × Holandesa",
+        "graus_reconhecidos": {
+          "5/8": "62.5% Holandês / 37.5% Gir",
+          "3/4": "75% Holandês / 25% Gir",
+          "7/8": "87.5% Holandês / 12.5% Gir"
+        }
+      },
+      
+      "programas_melhoramento": [
+        "Programa de Melhoramento Genético do Girolando",
+        "Teste de Progênie",
+        "Sumário de Touros"
+      ]
+    },
+    
+    "ABCJ": {
+      "nome_completo": "Associação Brasileira de Criadores de Jersey",
+      "sigla": "ABCJ",
+      "website": "https://www.jersey.org.br",
+      "fundacao": 1950,
+      "sede": "Porto Alegre - RS",
+      "racas": ["Jersey"],
+      
+      "formato_registro": "JER-RG-[ANO]-[SEQ]",
+      
+      "tipos_registro": {
+        "RG": "Registro Genealógico"
+      },
+      
+      "identificacao_fisica": {
+        "tatuagem_obrigatoria": true,
+        "brinco_obrigatorio": true,
+        "brinco_cor_padrao": "marrom"
+      },
+      
+      "programas_melhoramento": [
+        "Programa de Melhoramento Genético",
+        "Controle Leiteiro"
+      ]
+    },
+    
+    "ABSG": {
+      "nome_completo": "Associação Brasileira da Raça Santa Gertrudis",
+      "sigla": "ABSG",
+      "website": "https://santagertrudis.com.br",
+      "fundacao": 1961,
+      "sede": "Sorocaba - SP",
+      "telefone": "(15) 3346-8211",
+      "email": "santagertrudis@santagertrudis.com.br",
+      "endereco": "Rua Octaviano Gozzano, 216, sala 51 - Parque Campolim - Sorocaba/SP",
+      "racas": ["Santa Gertrudis"],
+      
+      "formato_registro": "ABSG-RG-[ANO]-[SEQ]",
+      
+      "tipos_registro": {
+        "RG": "Registro Genealógico",
+        "RGN": "Registro Genealógico de Nascimento"
+      },
+      
+      "identificacao_fisica": {
+        "tatuagem_obrigatoria": true,
+        "tatuagem_local": "orelhas",
+        "tatuagem_orelha_direita": "ABSG",
+        "tatuagem_orelha_esquerda": "sequencial",
+        "brinco_cor_padrao": "vermelho",
+        "brinco_obrigatorio": true
+      },
+      
+      "composicao_racial_fixa": {
+        "Shorthorn": 0.625,
+        "Brahman": 0.375
+      },
+      
+      "raca_tipo": "composta_sintetica",
+      "composicao_fixa": true,
+      "permite_cruzamento_absorvente": false,
+      
+      "caracteristicas_raca": {
+        "pelagem_padrao": "vermelho_cereja",
+        "chifres": "mocho_obrigatorio",
+        "primeira_raca_composta_reconhecida": 1940
+      },
+      
+      "observacoes": [
+        "Primeira raça bovina composta reconhecida pelo USDA",
+        "Raça que mais cresce no Brasil",
+        "Composição racial fixa desde 1940",
+        "Heterose permanente (raça estabilizada)"
+      ],
+      
+      "programas_melhoramento": [
+        "Programa de Melhoramento Santa Gertrudis Brasil",
+        "Avaliação de Centrais de Desempenho"
+      ]
+    }
+  }
+}
+

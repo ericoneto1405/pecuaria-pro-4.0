@@ -1,0 +1,819 @@
+{
+  "Nelore": {
+    "nome": "Nelore",
+    "tipo": "zebuino",
+    "subtipo": "corte",
+    "valor_base": 8000,
+    "origem": "Índia",
+    "descricao": "Raça zebuína mais criada no Brasil, adaptada ao clima tropical com alta rusticidade",
+    
+    "ganho_peso": {
+      "media": 1.35,
+      "desvio": 0.15,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 75,
+      "desvio": 10,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 80,
+      "desvio": 8,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 90,
+      "desvio": 5,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 70,
+      "desvio": 8,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["E^D", "e"],
+    "alelos_chifres": ["P_g", "p"],
+    "pelagens_comuns": ["cinza", "branco", "rajado"],
+    
+    "caracteristicas_visuais": {
+      "cupim": "grande",
+      "orelhas": "grandes_pendentes",
+      "barbela": "pronunciada",
+      "porte": "grande"
+    }
+  },
+  
+  "Angus": {
+    "nome": "Angus",
+    "tipo": "taurino",
+    "subtipo": "corte",
+    "valor_base": 12000,
+    "origem": "Escócia",
+    "descricao": "Raça taurina famosa pela qualidade excepcional da carne marmoreada",
+    
+    "ganho_peso": {
+      "media": 1.45,
+      "desvio": 0.12,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 70,
+      "desvio": 12,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 85,
+      "desvio": 7,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 65,
+      "desvio": 10,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 95,
+      "desvio": 5,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["E^D", "e"],
+    "alelos_chifres": ["P_c", "P_c"],
+    "pelagens_comuns": ["preto", "vermelho"],
+    "mocho_padrao": true,
+    
+    "caracteristicas_visuais": {
+      "cupim": "ausente",
+      "orelhas": "pequenas_eretas",
+      "barbela": "discreta",
+      "porte": "medio_grande"
+    }
+  },
+  
+  "Hereford": {
+    "nome": "Hereford",
+    "tipo": "taurino",
+    "subtipo": "corte",
+    "valor_base": 11000,
+    "origem": "Inglaterra",
+    "descricao": "Raça taurina com característica cara branca, excelente ganho de peso",
+    
+    "ganho_peso": {
+      "media": 1.50,
+      "desvio": 0.13,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 72,
+      "desvio": 11,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 82,
+      "desvio": 8,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 68,
+      "desvio": 9,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 88,
+      "desvio": 6,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["E^D", "e"],
+    "alelos_chifres": ["P", "p"],
+    "pelagens_comuns": ["vermelho_cara_branca"],
+    
+    "caracteristicas_visuais": {
+      "cupim": "ausente",
+      "orelhas": "medias",
+      "barbela": "discreta",
+      "porte": "grande",
+      "caracteristica_especial": "cara_branca"
+    }
+  },
+  
+  "Charolês": {
+    "nome": "Charolês",
+    "tipo": "taurino",
+    "subtipo": "corte",
+    "valor_base": 13000,
+    "origem": "França",
+    "descricao": "Raça taurina de grande porte, pelagem clara, excelente para produção de carne",
+    
+    "ganho_peso": {
+      "media": 1.55,
+      "desvio": 0.14,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 68,
+      "desvio": 12,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 78,
+      "desvio": 9,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 62,
+      "desvio": 11,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 90,
+      "desvio": 6,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["D", "D"],
+    "alelos_chifres": ["P", "p"],
+    "pelagens_comuns": ["creme", "branco"],
+    
+    "caracteristicas_visuais": {
+      "cupim": "ausente",
+      "orelhas": "medias",
+      "barbela": "discreta",
+      "porte": "muito_grande"
+    }
+  },
+  
+  "Senepol": {
+    "nome": "Senepol",
+    "tipo": "taurino",
+    "subtipo": "corte",
+    "valor_base": 10500,
+    "origem": "Ilhas Virgens (EUA)",
+    "descricao": "Raça taurina mocha e sem cupim, com boa adaptação ao calor",
+    
+    "ganho_peso": {
+      "media": 1.40,
+      "desvio": 0.13,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 78,
+      "desvio": 9,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 84,
+      "desvio": 7,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 82,
+      "desvio": 7,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 86,
+      "desvio": 7,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["e", "e"],
+    "alelos_chifres": ["P", "P"],
+    "pelagens_comuns": ["vermelho"],
+    "mocho_padrao": true,
+    
+    "caracteristicas_visuais": {
+      "cupim": "ausente",
+      "orelhas": "medias",
+      "barbela": "moderada",
+      "porte": "medio"
+    }
+  },
+  
+  "Brahman": {
+    "nome": "Brahman",
+    "tipo": "zebuino",
+    "subtipo": "corte",
+    "valor_base": 9000,
+    "origem": "Estados Unidos (origem indiana)",
+    "descricao": "Raça zebuína americana, alta resistência e habilidade materna",
+    
+    "ganho_peso": {
+      "media": 1.40,
+      "desvio": 0.14,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 82,
+      "desvio": 8,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 83,
+      "desvio": 7,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 88,
+      "desvio": 6,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 72,
+      "desvio": 8,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["E^D", "e"],
+    "alelos_chifres": ["P", "p"],
+    "pelagens_comuns": ["cinza", "vermelho"],
+    
+    "caracteristicas_visuais": {
+      "cupim": "muito_grande",
+      "orelhas": "grandes_pendentes",
+      "barbela": "muito_pronunciada",
+      "porte": "grande"
+    }
+  },
+  
+  "Tabapuã": {
+    "nome": "Tabapuã",
+    "tipo": "zebuino",
+    "subtipo": "corte",
+    "valor_base": 7500,
+    "origem": "Brasil",
+    "descricao": "Raça zebuína brasileira, dócil e com boa habilidade materna",
+    
+    "ganho_peso": {
+      "media": 1.30,
+      "desvio": 0.14,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 80,
+      "desvio": 9,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 82,
+      "desvio": 8,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 85,
+      "desvio": 7,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 68,
+      "desvio": 9,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["E^D", "e"],
+    "alelos_chifres": ["P_g", "p"],
+    "pelagens_comuns": ["cinza", "preto"],
+    
+    "caracteristicas_visuais": {
+      "cupim": "grande",
+      "orelhas": "grandes_pendentes",
+      "barbela": "pronunciada",
+      "porte": "medio_grande",
+      "temperamento": "docil"
+    }
+  },
+  
+  "Guzerá": {
+    "nome": "Guzerá",
+    "tipo": "zebuino",
+    "subtipo": "corte_leite",
+    "valor_base": 8500,
+    "origem": "Índia",
+    "descricao": "Raça zebuína de dupla aptidão, excelente habilidade materna",
+    
+    "ganho_peso": {
+      "media": 1.28,
+      "desvio": 0.15,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 88,
+      "desvio": 7,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 85,
+      "desvio": 7,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 87,
+      "desvio": 6,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 70,
+      "desvio": 8,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["E^D", "e"],
+    "alelos_chifres": ["p", "p"],
+    "pelagens_comuns": ["cinza"],
+    
+    "caracteristicas_visuais": {
+      "cupim": "grande",
+      "orelhas": "grandes_pendentes",
+      "barbela": "pronunciada",
+      "porte": "grande",
+      "chifres_caracteristicos": "lira"
+    }
+  },
+  
+  "Sindi": {
+    "nome": "Sindi",
+    "tipo": "zebuino",
+    "subtipo": "corte",
+    "valor_base": 7000,
+    "origem": "Paquistão",
+    "descricao": "Raça zebuína pequena, rústica e adaptada ao semiárido",
+    
+    "ganho_peso": {
+      "media": 1.20,
+      "desvio": 0.14,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 83,
+      "desvio": 8,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 86,
+      "desvio": 6,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 92,
+      "desvio": 5,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 65,
+      "desvio": 9,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["e", "e"],
+    "alelos_chifres": ["p", "p"],
+    "pelagens_comuns": ["vermelho"],
+    
+    "caracteristicas_visuais": {
+      "cupim": "medio",
+      "orelhas": "medias_pendentes",
+      "barbela": "moderada",
+      "porte": "pequeno_medio"
+    }
+  },
+  
+  "Holandesa": {
+    "nome": "Holandesa",
+    "tipo": "taurino",
+    "subtipo": "leite",
+    "valor_base": 15000,
+    "origem": "Holanda",
+    "descricao": "Raça leiteira mais produtiva, exige manejo intensivo",
+    
+    "ganho_peso": {
+      "media": 1.10,
+      "desvio": 0.12,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 65,
+      "desvio": 12,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 75,
+      "desvio": 10,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 55,
+      "desvio": 12,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 60,
+      "desvio": 10,
+      "heritabilidade": 0.5
+    },
+    "producao_leite": {
+      "media": 30,
+      "desvio": 5,
+      "heritabilidade": 0.3
+    },
+    
+    "alelos_pelagem": ["E^D", "e"],
+    "alelos_chifres": ["P_f", "p"],
+    "pelagens_comuns": ["preto_branco", "vermelho_branco"],
+    
+    "caracteristicas_visuais": {
+      "cupim": "ausente",
+      "orelhas": "medias",
+      "barbela": "discreta",
+      "porte": "grande",
+      "ubere": "muito_desenvolvido"
+    }
+  },
+  
+  "Girolando": {
+    "nome": "Girolando",
+    "tipo": "composta",
+    "subtipo": "leite",
+    "composicao_base": {
+      "Gir": 0.375,
+      "Holandesa": 0.625
+    },
+    "valor_base": 12000,
+    "origem": "Brasil",
+    "descricao": "Raça composta brasileira, cruza rusticidade do Gir com produção da Holandesa",
+    
+    "ganho_peso": {
+      "media": 1.15,
+      "desvio": 0.13,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 78,
+      "desvio": 9,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 82,
+      "desvio": 8,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 80,
+      "desvio": 8,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 65,
+      "desvio": 9,
+      "heritabilidade": 0.5
+    },
+    "producao_leite": {
+      "media": 22,
+      "desvio": 4,
+      "heritabilidade": 0.3
+    },
+    
+    "graus_sangue": ["5/8", "3/4", "7/8"],
+    "alelos_pelagem": ["E^D", "e"],
+    "alelos_chifres": ["P", "p"],
+    "pelagens_comuns": ["variado"],
+    
+    "caracteristicas_visuais": {
+      "cupim": "pequeno_medio",
+      "orelhas": "medias_pendentes",
+      "barbela": "moderada",
+      "porte": "medio_grande"
+    }
+  },
+  
+  "Jersey": {
+    "nome": "Jersey",
+    "tipo": "taurino",
+    "subtipo": "leite",
+    "valor_base": 10000,
+    "origem": "Inglaterra (Ilha de Jersey)",
+    "descricao": "Raça leiteira pequena, leite com alto teor de gordura e proteína",
+    
+    "ganho_peso": {
+      "media": 0.95,
+      "desvio": 0.11,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 75,
+      "desvio": 10,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 88,
+      "desvio": 6,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 70,
+      "desvio": 10,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 58,
+      "desvio": 10,
+      "heritabilidade": 0.5
+    },
+    "producao_leite": {
+      "media": 20,
+      "desvio": 3,
+      "heritabilidade": 0.3
+    },
+    
+    "alelos_pelagem": ["e", "e"],
+    "alelos_chifres": ["P", "P"],
+    "pelagens_comuns": ["castanho"],
+    "mocho_padrao": true,
+    
+    "caracteristicas_visuais": {
+      "cupim": "ausente",
+      "orelhas": "pequenas",
+      "barbela": "discreta",
+      "porte": "pequeno"
+    }
+  },
+  
+  "Gir": {
+    "nome": "Gir",
+    "tipo": "zebuino",
+    "subtipo": "leite",
+    "valor_base": 9000,
+    "origem": "Índia",
+    "descricao": "Raça zebuína leiteira, base materna do Girolando",
+    
+    "ganho_peso": {
+      "media": 1.10,
+      "desvio": 0.14,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 85,
+      "desvio": 8,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 84,
+      "desvio": 7,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 90,
+      "desvio": 6,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 62,
+      "desvio": 10,
+      "heritabilidade": 0.5
+    },
+    "producao_leite": {
+      "media": 15,
+      "desvio": 3,
+      "heritabilidade": 0.3
+    },
+    
+    "alelos_pelagem": ["E^D", "e"],
+    "alelos_chifres": ["p", "p"],
+    "pelagens_comuns": ["chitado", "vermelho", "branco"],
+    
+    "caracteristicas_visuais": {
+      "cupim": "medio",
+      "orelhas": "grandes_pendentes",
+      "barbela": "pronunciada",
+      "porte": "medio",
+      "fronte_convexa": true
+    }
+  },
+  
+  "Bonsmara": {
+    "nome": "Bonsmara",
+    "tipo": "composta",
+    "subtipo": "corte",
+    "composicao_base": {
+      "Africander": 0.50,
+      "Hereford": 0.25,
+      "Shorthorn": 0.25
+    },
+    "valor_base": 9500,
+    "origem": "África do Sul",
+    "descricao": "Raça composta sul-africana, adaptada a climas quentes",
+    
+    "ganho_peso": {
+      "media": 1.38,
+      "desvio": 0.13,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 84,
+      "desvio": 8,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 86,
+      "desvio": 7,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 85,
+      "desvio": 7,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 80,
+      "desvio": 7,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["e", "e"],
+    "alelos_chifres": ["P", "p"],
+    "pelagens_comuns": ["vermelho"],
+    
+    "caracteristicas_visuais": {
+      "cupim": "pequeno",
+      "orelhas": "medias",
+      "barbela": "moderada",
+      "porte": "medio_grande"
+    }
+  },
+  
+  "Santa Gertrudis": {
+    "nome": "Santa Gertrudis",
+    "tipo": "composta",
+    "subtipo": "corte",
+    "composicao_base": {
+      "Shorthorn": 0.625,
+      "Brahman": 0.375
+    },
+    "valor_base": 10000,
+    "origem": "Estados Unidos (Texas)",
+    "descricao": "Primeira raça composta reconhecida pelo USDA, cruza qualidade da carne com rusticidade",
+    
+    "ganho_peso": {
+      "media": 1.50,
+      "desvio": 0.14,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 82,
+      "desvio": 8,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 88,
+      "desvio": 6,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 85,
+      "desvio": 7,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 82,
+      "desvio": 7,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["R", "R"],
+    "alelos_chifres": ["P", "P"],
+    "pelagens_comuns": ["vermelho_cereja", "vermelho_escuro"],
+    "mocho_padrao": true,
+    
+    "caracteristicas_visuais": {
+      "cupim": "pequeno",
+      "orelhas": "medias",
+      "barbela": "moderada",
+      "porte": "grande",
+      "pelagem_caracteristica": "vermelho_uniforme"
+    },
+    
+    "historico": {
+      "criador": "King Ranch",
+      "ano_fundacao": 1910,
+      "reconhecimento_usda": 1940,
+      "chegada_brasil": "década de 1950"
+    },
+    
+    "vantagens": [
+      "Alta adaptação ao calor",
+      "Excelente conversão alimentar",
+      "Heterose fixa (raça estabilizada)",
+      "Boa precocidade sexual",
+      "Rusticidade + qualidade de carcaça"
+    ]
+  },
+  
+  "Braford": {
+    "nome": "Braford",
+    "tipo": "composta",
+    "subtipo": "corte",
+    "composicao_base": {
+      "Hereford": 0.625,
+      "Brahman": 0.25,
+      "Nelore": 0.125
+    },
+    "valor_base": 10500,
+    "origem": "Estados Unidos / Brasil",
+    "descricao": "Raça composta que combina a qualidade da carne do Hereford com a rusticidade do zebu, sem a cara branca característica",
+    
+    "ganho_peso": {
+      "media": 1.48,
+      "desvio": 0.13,
+      "heritabilidade": 0.4
+    },
+    "hab_materna": {
+      "media": 80,
+      "desvio": 9,
+      "heritabilidade": 0.2
+    },
+    "fertilidade": {
+      "media": 86,
+      "desvio": 7,
+      "heritabilidade": 0.1
+    },
+    "resistencia": {
+      "media": 83,
+      "desvio": 7,
+      "heritabilidade": 0.2
+    },
+    "qualidade_carne": {
+      "media": 85,
+      "desvio": 6,
+      "heritabilidade": 0.5
+    },
+    
+    "alelos_pelagem": ["e", "e"],
+    "alelos_chifres": ["P", "p"],
+    "pelagens_comuns": ["vermelho", "vermelho_escuro"],
+    "mocho_padrao": true,
+    
+    "caracteristicas_visuais": {
+      "cupim": "pequeno",
+      "orelhas": "medias",
+      "barbela": "moderada",
+      "porte": "grande",
+      "caracteristica_especial": "sem_cara_branca"
+    },
+    
+    "historico": {
+      "origem_composicao": "5/8 Hereford + 3/8 Zebu",
+      "desenvolvimento": "Estados Unidos (anos 1940) e Brasil",
+      "popularidade": "Muito popular no Sul do Brasil"
+    },
+    
+    "vantagens": [
+      "Excelente ganho de peso",
+      "Boa qualidade de carcaça",
+      "Alta adaptabilidade climática",
+      "Heterose fixa (raça estabilizada)",
+      "Fertilidade elevada",
+      "Rusticidade + produtividade"
+    ]
+  }
+}
+
