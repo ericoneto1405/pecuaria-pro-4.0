@@ -4,8 +4,8 @@
  * 
  * VELOCIDADES:
  * - PAUSE: 0 (pausado)
- * - NORMAL: 30 min de jogo a cada 1 hora real (0.5x)
- * - RAPIDO: 15 min de jogo a cada 1 hora real (0.25x)
+ * - NORMAL: 30 min real = 1 hora de jogo (2x mais rápido)
+ * - RAPIDO: 15 min real = 1 hora de jogo (4x mais rápido)
  */
 
 import { createContext, useContext, useState, useEffect, useRef } from 'react';
@@ -26,10 +26,10 @@ export function TempoProvider({ children }) {
   // Calcular quantos segundos do jogo passam por segundo real
   const getSegundosPorSegundo = (vel) => {
     if (vel === VELOCIDADES.PAUSE) return 0;
-    // NORMAL: 30 min jogo = 1800 seg em 3600 seg reais = 0.5
-    if (vel === VELOCIDADES.NORMAL) return 0.5;
-    // RÁPIDO: 15 min jogo = 900 seg em 3600 seg reais = 0.25
-    if (vel === VELOCIDADES.RAPIDO) return 0.25;
+    // NORMAL: 30 min real = 60 min jogo → 2x mais rápido
+    if (vel === VELOCIDADES.NORMAL) return 2;
+    // RÁPIDO: 15 min real = 60 min jogo → 4x mais rápido
+    if (vel === VELOCIDADES.RAPIDO) return 4;
     return 0;
   };
   
